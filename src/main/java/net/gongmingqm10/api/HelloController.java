@@ -1,11 +1,13 @@
-package net.gongmingqm10.controller;
+package net.gongmingqm10.api;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api")
 public class HelloController {
-    @RequestMapping("/")
+
+    @RequestMapping("")
     public String index() {
         return "Greeting from Spring Boot!";
     }
