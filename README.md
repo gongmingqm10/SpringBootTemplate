@@ -6,7 +6,13 @@ The template demo for SpringBoot
 * Java 8
 * Intellij (with Lombok plugin installed)
 
-## Step by step to build it
+## Run it
+
+```
+./gradlew build idea bootRun
+```
+
+## Step by step (build from sketch)
 
 ### Step 1
 
