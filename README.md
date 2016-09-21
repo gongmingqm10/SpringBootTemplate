@@ -1,7 +1,14 @@
 # SpringBootTemplate
 The template demo for SpringBoot
 
-## Step 1
+## Requirements
+
+* Java 8
+* Intellij (with Lombok plugin installed)
+
+## Step by step to build it
+
+### Step 1
 
 Download the initial spring boot sketch from [Spring Boot Starter](https://start.spring.io/)
 
@@ -11,7 +18,7 @@ Run `./gradlew build idea` to build the project
 
 Finally, run `./gradlew bootRun`. You should found the success log if everything is fine.
 
-## Step 2
+### Step 2
 
 Although we finished the sketch in Step 1. But if you run it, you found it exit immediately. Cause the Application is empty,
 you need more things to make it more like an `application`.
@@ -35,7 +42,7 @@ dependencies {
 
 After updating the gradle, run `./gradlew build` again to download the new dependencies.
 
-## Step 3
+### Step 3
 
 Add the `HelloController.java`, just follow the instruction.
 
@@ -64,7 +71,7 @@ public class Application {
 }
 ```
 
-## Step 4
+### Step 4
 
 Now you have added the Controller, try to run the Application again via intellij or by gradle `./gradlew bootRun`.
 
@@ -72,3 +79,10 @@ We added the Controller in Step 3. And Spring Boot will automatically find the c
 
 The application will hang up till you close it. Now you can see the `Hello World` message when you visit `localhost:8080`
 
+### Step 5
+
+We have added the dev-tools dependency. Means you can hot-run the application when you updated files.
+
+More details or configurations, find [here](http://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html)
+
+Each time you updated something, and want to see it. Please rebuild it via `Build -> Make Projects`. You can find the shortcut to do it very quickly.
