@@ -22,20 +22,18 @@ So please replace the dependencies block inside `build.gradle`.
 
 ```
 dependencies {
-    // tag::jetty[]
     compile("org.springframework.boot:spring-boot-starter-web") {
         exclude module: "spring-boot-starter-tomcat"
     }
     compile("org.springframework.boot:spring-boot-starter-jetty")
-    // end::jetty[]
-    // tag::actuator[]
     compile("org.springframework.boot:spring-boot-starter-actuator")
-    // end::actuator[]
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("junit:junit")
 }
 ```
 
-After replacement you should `./gradlew build` again to download the new dependencies.
+After updating the gradle, run `./gradlew build` again to download the new dependencies.
 
 ## Step 3
 
@@ -72,5 +70,5 @@ Now you have added the Controller, try to run the Application again via intellij
 
 We added the Controller in Step 3. And Spring Boot will automatically find the controller with annotation `@RestController`.
 
-The application will hang up till you close it. Now you should found the `Hello World` message when you visit `localhost:8080`
+The application will hang up till you close it. Now you can see the `Hello World` message when you visit `localhost:8080`
 
